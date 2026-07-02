@@ -35,7 +35,7 @@
                 <ul class="nav-list">
                     <li><a href="#hero" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#sandbox" class="nav-link">Strategy Matrix</a></li>
+                    <li><a href="#featured-work" class="nav-link">Featured Work</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                     <li><a href="#contact" class="nav-link nav-btn">Let's Talk</a></li>
@@ -67,7 +67,7 @@
                     </p>
 
                     <div class="hero-actions">
-                        <a href="#sandbox" class="btn btn-primary" id="explore-work-btn">Test My Content Sandbox</a>
+                        <a href="#featured-work" class="btn btn-primary" id="explore-work-btn">Explore Featured Work</a>
                         <a href="#contact" class="btn btn-secondary" id="contact-hero-btn">Consult Strategy</a>
                     </div>
                 </div>
@@ -156,113 +156,169 @@
         </section>
 
         <!-- Signature Section: Content Adaptability Sandbox -->
-        <section id="sandbox" class="sandbox-section">
+        <!-- Featured Work Section -->
+        <section id="featured-work" class="featured-work-section">
             <div class="section-container">
-                <div class="sandbox-header text-center">
-                    <div class="section-eyebrow">THE SIGNATURE</div>
-                    <h2 class="section-title">The Content Adaptability Sandbox</h2>
+                <div class="featured-work-header text-center">
+                    <div class="section-eyebrow">THE ARCHIVE</div>
+                    <h2 class="section-title">Featured Work & Case Studies</h2>
                     <p class="section-desc max-w-600">
-                        See the exact difference between generic, templated AI copy and hand-optimized, strategic content. Toggle different industries to watch Priya's styling and optimization engine run.
+                        Explore deep-dive analyses of editorial challenges, strategic writing processes, and operational workflows across diverse content domains.
                     </p>
                 </div>
 
-                <!-- Sandbox Console Panel -->
-                <div class="sandbox-console" id="sandbox-console-wrapper">
+                <div class="featured-work-grid">
                     
-                    <!-- Console Header / Tabs -->
-                    <div class="console-header">
-                        <div class="console-dots">
-                            <span class="dot red-dot"></span>
-                            <span class="dot yellow-dot"></span>
-                            <span class="dot green-dot"></span>
+                    <!-- Card 1: Finance -->
+                    <article class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-card-tag font-mono">FINANCE</span>
+                            <h3 class="work-card-title">Securities & Derivative Markets Guide</h3>
                         </div>
-                        <div class="console-tabs" id="console-industry-tabs">
-                            <button class="tab-btn active" data-industry="finance" id="tab-finance">Finance</button>
-                            <button class="tab-btn" data-industry="healthcare" id="tab-healthcare">Healthcare</button>
-                            <button class="tab-btn" data-industry="automotive" id="tab-automotive">Automotive</button>
-                            <button class="tab-btn" data-industry="lifestyle" id="tab-lifestyle">Fashion & Lifestyle</button>
-                            <button class="tab-btn" data-industry="edtech" id="tab-edtech">EdTech</button>
-                        </div>
-                    </div>
-
-                    <!-- Console Body Grid -->
-                    <div class="console-body">
-                        
-                        <!-- Col 1: Text Comparison -->
-                        <div class="console-text-column">
-                            <div class="column-header">
-                                <span class="col-title">CONTENT DRAFT SIMULATION</span>
-                                <div class="toggle-mode-wrapper">
-                                    <button class="toggle-btn active" id="toggle-generic" data-mode="generic">Generic AI Output</button>
-                                    <button class="toggle-btn" id="toggle-priya" data-mode="priya">Priya's Optimized Copy</button>
-                                </div>
+                        <div class="work-card-body">
+                            <div class="work-meta-block">
+                                <span class="meta-label">Project Description</span>
+                                <p class="meta-val">Educational guide series detailing options trading strategies, market volatility indexes, and portfolio hedging techniques for retail investors.</p>
                             </div>
-                            <div class="text-editor-box">
-                                <div class="line-numbers" id="editor-lines">
-                                    <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span>
-                                </div>
-                                <div class="text-content-area" id="sandbox-text-content">
-                                    <!-- Dynamic text gets inserted here by script -->
-                                    Loading simulation text...
-                                </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Challenges</span>
+                                <p class="meta-val">Adhering to strict SEBI/FINRA compliance guidelines without sacrificing consumer clarity, while mapping complex mathematical payoff formulas in plain text.</p>
                             </div>
-                            <div class="column-footer">
-                                <span class="footer-meta-item">Status: <span class="text-accent" id="sandbox-status">Simulating...</span></span>
-                                <span class="footer-meta-item" id="sandbox-words-count">Words: 120</span>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Writing Process</span>
+                                <p class="meta-val">Partnered with financial analysts to construct accurate scenario grids, created visual step-by-step risk profiles, and organized layout hierarchy using standard table summaries.</p>
                             </div>
                         </div>
+                        <div class="work-card-footer">
+                            <a href="#contact" class="btn-text-cta">Read Options Trading Case Study &rarr;</a>
+                        </div>
+                    </article>
 
-                        <!-- Col 2: Metric Calculations & Audits -->
-                        <div class="console-audit-column">
-                            <div class="column-header">
-                                <span class="col-title">REAL-TIME AUDIT ANALYSIS</span>
+                    <!-- Card 2: Automotive -->
+                    <article class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-card-tag font-mono">AUTOMOTIVE</span>
+                            <h3 class="work-card-title">EV Drivetrains & Thermal Management</h3>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-meta-block">
+                                <span class="meta-label">Project Description</span>
+                                <p class="meta-val">Technical analysis and search-optimized product copy outlining the engineering specs of EV battery cells, state-of-health (SoH) diagnostics, and charging operations.</p>
                             </div>
-                            <div class="audit-dashboard">
-                                
-                                <!-- Metric 1: Readability Index -->
-                                <div class="audit-metric">
-                                    <div class="metric-meta">
-                                        <span class="metric-name">Flesch-Kincaid Readability</span>
-                                        <span class="metric-val text-accent" id="readability-val">42 / 100</span>
-                                    </div>
-                                    <div class="progress-bar-bg">
-                                        <div class="progress-bar-fill" id="readability-fill" style="width: 42%;"></div>
-                                    </div>
-                                    <span class="metric-explanation" id="readability-explanation">Very difficult to read. Best suited for scientific journals.</span>
-                                </div>
-
-                                <!-- Metric 2: SEO Score -->
-                                <div class="audit-metric">
-                                    <div class="metric-meta">
-                                        <span class="metric-name">SEO Keyword density</span>
-                                        <span class="metric-val text-white" id="seo-score-val">1.2%</span>
-                                    </div>
-                                    <div class="progress-bar-bg">
-                                        <div class="progress-bar-fill" id="seo-score-fill" style="width: 35%;"></div>
-                                    </div>
-                                    <span class="metric-explanation" id="seo-explanation">Keywords are sparse. Needs structured headings.</span>
-                                </div>
-
-                                <!-- Keyword Tags -->
-                                <div class="keyword-density-section">
-                                    <span class="section-subtitle">Target Keywords Detected</span>
-                                    <div class="keyword-tags" id="sandbox-keywords-container">
-                                        <!-- Keywords rendered dynamically -->
-                                    </div>
-                                </div>
-
-                                <!-- SEO Checklist -->
-                                <div class="seo-checklist">
-                                    <span class="section-subtitle">Strategy Checklist</span>
-                                    <ul class="checklist-items" id="sandbox-checklist">
-                                        <!-- Rendered dynamically -->
-                                    </ul>
-                                </div>
-
+                            <div class="work-meta-block">
+                                <span class="meta-label">Challenges</span>
+                                <p class="meta-val">Structuring highly technical thermodynamics and electrical current information so it remains engaging to non-engineering buyers while maintaining E-E-A-T search authority.</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Writing Process</span>
+                                <p class="meta-val">Translated EV engineering datasheets into readable specifications, established custom SEO topic clusters targeting high-intent mobility terms, and drafted visual process callouts.</p>
                             </div>
                         </div>
+                        <div class="work-card-footer">
+                            <a href="#contact" class="btn-text-cta">Read Mobility Transition Case Study &rarr;</a>
+                        </div>
+                    </article>
 
-                    </div>
+                    <!-- Card 3: Healthcare -->
+                    <article class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-card-tag font-mono">HEALTHCARE</span>
+                            <h3 class="work-card-title">FDA-Compliant Patient Intake Flow</h3>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-meta-block">
+                                <span class="meta-label">Project Description</span>
+                                <p class="meta-val">Patient Onboarding screens, clinical documentation guidelines, and privacy transparency resources for a telehealth platform.</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Challenges</span>
+                                <p class="meta-val">Meeting strict FDA Plain Writing Act readability scores while explaining complex medical privacy laws and data permissions clearly and legally.</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Writing Process</span>
+                                <p class="meta-val">Conducted readability diagnostic testing, broke dense legalese blocks into progressive disclosure structures, and crafted simple interactive onboarding tooltips.</p>
+                            </div>
+                        </div>
+                        <div class="work-card-footer">
+                            <a href="#contact" class="btn-text-cta">Read Telehealth Onboarding Case Study &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Education -->
+                    <article class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-card-tag font-mono">EDUCATION</span>
+                            <h3 class="work-card-title">Modular Career Transition Curriculums</h3>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-meta-block">
+                                <span class="meta-label">Project Description</span>
+                                <p class="meta-val">Interactive coding tutorials, step-by-step career path documentations, and technology overview articles for an online learning company.</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Challenges</span>
+                                <p class="meta-val">Designing educational resources that maintain learner engagement during high-churn modules (e.g., recursive data structures or SQL joins).</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Writing Process</span>
+                                <p class="meta-val">Structured the guides into progressive modular cards, implemented a benefit-first copy layout, and added custom recap checklists to solidify core concepts.</p>
+                            </div>
+                        </div>
+                        <div class="work-card-footer">
+                            <a href="#contact" class="btn-text-cta">Read Curriculum Architecture Case Study &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 5: Product Descriptions -->
+                    <article class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-card-tag font-mono">RETAIL</span>
+                            <h3 class="work-card-title">Conscious Luxury Merino Wool Catalog</h3>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-meta-block">
+                                <span class="meta-label">Project Description</span>
+                                <p class="meta-val">E-commerce product copy, catalog narratives, and sustainable sourcing explainers for a premium apparel launch.</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Challenges</span>
+                                <p class="meta-val">Conveying structured material sustainability facts (E-E-A-T trust points) while keeping the brand voice highly aesthetic, premium, and evocative.</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Writing Process</span>
+                                <p class="meta-val">Employed sensory copywriting frameworks focusing on tactile and fit details, structured technical material metrics in small data tags, and integrated long-tail search intent nodes.</p>
+                            </div>
+                        </div>
+                        <div class="work-card-footer">
+                            <a href="#contact" class="btn-text-cta">Read Retail Brand Case Study &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 6: AI-Assisted Editorial Workflows -->
+                    <article class="work-card">
+                        <div class="work-card-header">
+                            <span class="work-card-tag font-mono">EDITORIAL SYSTEMS</span>
+                            <h3 class="work-card-title">Generative Content SOP & Prompt System</h3>
+                        </div>
+                        <div class="work-card-body">
+                            <div class="work-meta-block">
+                                <span class="meta-label">Project Description</span>
+                                <p class="meta-val">Style alignment protocols, modular prompt inject templates, and quality control standard operating procedures (SOPs) for corporate editing teams.</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Challenges</span>
+                                <p class="meta-val">Overcoming repetitive, low-density AI drafts to sustain high editorial standards, while maintaining a consistent brand voice across dozens of writers.</p>
+                            </div>
+                            <div class="work-meta-block">
+                                <span class="meta-label">Writing Process</span>
+                                <p class="meta-val">Developed customized contextual prompt rules, mapped out a "two-pass" human-in-the-loop editing system, and compiled an index of banned AI clichés and wordy defaults.</p>
+                            </div>
+                        </div>
+                        <div class="work-card-footer">
+                            <a href="#contact" class="btn-text-cta">Read Workflow SOP Case Study &rarr;</a>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>

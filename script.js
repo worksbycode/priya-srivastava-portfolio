@@ -395,6 +395,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ==========================================================================
+       Statistics Counter Animation
+       ========================================================================== */
+    const stats = document.querySelectorAll('.stat-num');
+    
+    const animateStats = () => {
+        stats.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target'), 10);
+            const duration = 1600; // 1.6 seconds
+            const startTime = performance.now();
+            
+            const updateCount = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Ease out cubic
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const currentValue = Math.floor(easeProgress * target);
+                
+                stat.textContent = currentValue.toLocaleString();
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                } else {
+                    stat.textContent = target.toLocaleString();
+                }
+            };
+            
+            requestAnimationFrame(updateCount);
+        });
+    };
+
+    // Intersection Observer to trigger animation when scrolled into view
+    if ('IntersectionObserver' in window && stats.length > 0) {
+        const statsSection = document.getElementById('stats');
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
+        
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    } else {
+        // Fallback: immediately run if observer is not supported
+        stats.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target'), 10);
+            stat.textContent = target.toLocaleString();
+        });
+    }
+
+    /* ==========================================================================
        Contact Form Submission & Validation
        ========================================================================== */
     const contactForm = document.getElementById('portfolio-contact-form');

@@ -2359,3 +2359,169 @@ button.card-link:hover {
     border-color: var(--clr-primary);
     color: var(--clr-text-white);
 }
+
+/* ==========================================================================
+   Print / PDF Resume Optimizations
+   ========================================================================== */
+
+/* Hide print bullets on screen, style them for print markup structure */
+.timeline-print-bullets {
+    display: none;
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    list-style-type: none;
+}
+
+.timeline-print-bullets li {
+    font-size: 0.88rem;
+    color: var(--clr-text-silver);
+    line-height: 1.5;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-print-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: -1.2rem;
+    color: var(--clr-accent);
+    font-weight: 700;
+}
+
+#print-resume-btn {
+    transition: all var(--transition-fast) !important;
+}
+
+#print-resume-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: var(--clr-accent) !important;
+    color: var(--clr-accent) !important;
+}
+
+@media print {
+    /* Set page settings and color preservation */
+    html, body {
+        color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+        background: #070303 !important; /* Premium Editorial Dark Bg */
+        color: #ffffff !important;
+        font-size: 10.5pt !important;
+        line-height: 1.45 !important;
+    }
+
+    /* Hide screen-only interactive wrappers */
+    header,
+    nav,
+    .nav-bar,
+    .hero-actions,
+    .lab-audit-section,
+    .btn-achievements-drawer,
+    .portfolio-modal,
+    .modal-overlay,
+    .drawer,
+    .drawer-overlay,
+    .contact-form-container,
+    .timeline-vertical-line,
+    .timeline-dot,
+    footer,
+    #console-industry-tabs,
+    .theme-toggle-btn,
+    .contact-section form,
+    .lab-dashboard-grid,
+    .panel-header,
+    .panel-body-bottom {
+        display: none !important;
+    }
+
+    .section-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .hero-section {
+        padding: 1.5cm 0 !important;
+        page-break-after: avoid !important;
+    }
+
+    .metrics-row {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        gap: 1.5rem !important;
+        margin: 2rem 0 !important;
+    }
+
+    .metric-card {
+        border: 1px solid rgba(255, 51, 68, 0.2) !important;
+        padding: 1rem !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        flex: 1 !important;
+        text-align: center !important;
+        page-break-inside: avoid !important;
+    }
+
+    .experience-section,
+    .portfolio-section,
+    .contact-section {
+        padding: 1.5cm 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        page-break-inside: auto !important;
+    }
+
+    .timeline-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .timeline-item {
+        display: grid !important;
+        grid-template-columns: 180px 1fr !important;
+        gap: 2rem !important;
+        margin-bottom: 2.5rem !important;
+        page-break-inside: avoid !important;
+    }
+
+    .timeline-meta {
+        text-align: right !important;
+        padding-right: 1.5rem !important;
+        border-right: 2px solid var(--clr-accent) !important;
+    }
+
+    .timeline-content-card {
+        border: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
+
+    .timeline-print-bullets {
+        display: block !important;
+    }
+
+    .portfolio-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+        page-break-inside: avoid !important;
+    }
+
+    .portfolio-card {
+        min-height: auto !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        background: transparent !important;
+        page-break-inside: avoid !important;
+    }
+
+    .card-link {
+        display: none !important;
+    }
+
+    .contact-grid {
+        display: block !important;
+    }
+
+    h2, h3 {
+        page-break-after: avoid !important;
+    }
+}
